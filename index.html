@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrecuenciaJD | Emprendimiento de Doblaje & Voz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navegación -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#inicio" class="logo">FRECUENCIA<span class="highlight-red">JD</span></a>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="#asistente-ia" class="nav-link">Cotizador IA</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                    <li><a href="#admin-login" class="nav-link btn-admin-nav">Panel Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero / Inicio -->
+    <section id="inicio" class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">FRECUENCIA<span class="highlight-red">JD</span></h1>
+            <p class="hero-subtitle">Estudio de Voz, Doblaje & Adaptación Musical. Dando vida y emoción a personajes de anime, videojuegos y locución comercial.</p>
+            <div class="hero-buttons">
+                <a href="#servicios" class="btn-red-glow">Ver Catálogo de Servicios</a>
+                <a href="https://dubversefandub.vercel.app/estudio/frecuenciajd" target="_blank" rel="noopener noreferrer" class="btn-outline">Estudio Dubverse</a>
+                <a href="https://www.atom.bio/frecuencia_jd" target="_blank" rel="noopener noreferrer" class="btn-outline">Atom Bio Links</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Acerca de mí -->
+    <section class="section">
+        <div class="section-container">
+            <h2 class="section-title">Acerca de FrecuenciaJD</h2>
+            <div class="about-grid">
+                <div class="profile-img-container">
+                    <img src="perfil.jpg" alt="FrecuenciaJD Foto de Perfil">
+                </div>
+                <div class="about-text">
+                    <p>¡Hola! Soy creador y productor en <strong>FrecuenciaJD</strong>. Me especializo en interpretación vocal con intención dramática y de acción, lipsync preciso y producción de audio en DAW.</p>
+                    <p>Cuento con cadenas vocales personalizadas para lograr una calidad pulida en proyectos independientes de doblaje, covers y fandubs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATÁLOGO DE SERVICIOS -->
+    <section id="servicios" class="section">
+        <div class="section-container">
+            <h2 class="section-title">Catálogo de Servicios</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Doblaje & Actuación de Voz</h3>
+                    <p>Interpretación con sincronización de labios (Lipsync) para anime, cortometrajes y videojuegos con alta intención emotiva.</p>
+                    <span class="service-price">Desde $15 USD / escena</span>
+                </div>
+                <div class="project-card">
+                    <h3>Adaptación & Rap Cover Vocal</h3>
+                    <p>Grabación vocal, adaptación lírica y mezcla completa para proyectos musicales de anime, rap y contenido geek.</p>
+                    <span class="service-price">Desde $25 USD / tema</span>
+                </div>
+                <div class="project-card">
+                    <h3>Locución Comercial</h3>
+                    <p>Grabación limpia de promos, intros para YouTube y locución con tono dinámico y juvenil para redes sociales.</p>
+                    <span class="service-price">Desde $10 USD / spot</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IA APLICADA: ASISTENTE Y COTIZADOR VIRTUAL -->
+    <section id="asistente-ia" class="section">
+        <div class="section-container">
+            <h2 class="section-title">Asistente Virtual con IA</h2>
+            <p class="ia-desc">Pide una cotización estimada al instante o resuelve tus dudas sobre los servicios vocales de FrecuenciaJD.</p>
+            <div class="ia-box">
+                <div class="ia-chat" id="ia-chat">
+                    <div class="chat-msg bot">¡Hola! Soy el asistente virtual de FrecuenciaJD. ¿En qué servicio estás interesado o cuántos minutos/palabras dura tu guion?</div>
+                </div>
+                <div class="ia-input-container">
+                    <input type="text" id="ia-user-input" placeholder="Ej: Quiero cotizar un doblaje de 2 minutos...">
+                    <button id="ia-send-btn" class="btn-red-glow">Consultar IA</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section">
+        <div class="section-container">
+            <h2 class="section-title">Contacto Directo</h2>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre / Nombre de usuario</label>
+                    <input type="text" id="name" placeholder="Tu nombre">
+                    <small class="error-msg" id="name-error"></small>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" placeholder="tu@email.com">
+                    <small class="error-msg" id="email-error"></small>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje / Propuesta de Proyecto</label>
+                    <textarea id="message" rows="5" placeholder="Cuéntame sobre tu proyecto..."></textarea>
+                    <small class="error-msg" id="message-error"></small>
+                </div>
+                <button type="submit" class="btn-red-glow" style="width: 100%;">Enviar Mensaje</button>
+                <div id="form-status" class="form-status"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- PANEL ADMIN & LOGIN -->
+    <section id="admin-login" class="section">
+        <div class="section-container">
+            <h2 class="section-title">Panel de Administración</h2>
+            <div class="admin-box" id="admin-login-box">
+                <p>Acceso restringido para gestión de solicitudes (Clave de prueba: <strong>admin123</strong>)</p>
+                <div class="form-group" style="margin-top: 1rem;">
+                    <input type="password" id="admin-pass" placeholder="Ingresa la contraseña de admin">
+                    <small class="error-msg" id="admin-error"></small>
+                </div>
+                <button id="btn-login-admin" class="btn-outline" style="width: 100%;">Ingresar</button>
+            </div>
+
+            <!-- Panel oculto que se abre al poner la clave -->
+            <div class="admin-dashboard hidden" id="admin-dashboard">
+                <h3>¡Bienvenido, Administrador de FrecuenciaJD!</h3>
+                <p style="margin-bottom: 1rem; color: var(--text-gray);">Aquí puedes ver los mensajes enviados desde el formulario de contacto y las consultas de la IA.</p>
+                <div class="data-table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Cliente</th>
+                                <th>Email</th>
+                                <th>Mensaje / Consulta</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody id="admin-requests-list">
+                            <tr>
+                                <td>Proyecto Dubverse</td>
+                                <td>dubverse@fandub.com</td>
+                                <td>Audición para personaje de acción aprobada.</td>
+                                <td><span class="badge success">Completado</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <button id="btn-logout-admin" class="btn-outline" style="margin-top: 1.5rem;">Cerrar Sesión</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 FrecuenciaJD. Todos los derechos reservados. Emprendimiento Digital - Jóvenes Creativos.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
